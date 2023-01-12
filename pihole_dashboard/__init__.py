@@ -113,7 +113,7 @@ def update():
     status_2 = r2['status']
     
     OUTPUT_STRING = "[✓] Total: {} / {}".format(dns_queries_today_1, dns_queries_today_2)
-    OUTPUT_STRING = OUTPUT_STRING + "\n" + "[✓] Cached: {} / {}".format(queries_cached_1, ads_percentage_today_2)
+    OUTPUT_STRING = OUTPUT_STRING + "\n" + "[✓] Cached: {} / {}".format(queries_cached_1, queries_cached_2)
     OUTPUT_STRING = OUTPUT_STRING + "\n" + "[×] Blocked: {} / {}".format(ads_blocked_today_1, ads_blocked_today_2)
     OUTPUT_STRING = OUTPUT_STRING + "\n" + "[×] Blocked: {}% / {}%".format(ads_percentage_today_1, ads_percentage_today_2)
     OUTPUT_STRING = OUTPUT_STRING + "\n" + "[×] Blocklist: {} / {}".format(domains_being_blocked_1, domains_being_blocked_2)
