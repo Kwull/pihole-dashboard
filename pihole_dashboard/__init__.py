@@ -76,10 +76,10 @@ def draw_dashboard(status_string, out_string=None):
 
 
 def update():
-    url = "http://{}:{}/admin/api.php".format(PIHOLE_1_ADDR, PIHOLE_1_PORT)
+    url = "http://{}:{}/admin/api.php?summary&auth=".format(PIHOLE_1_ADDR, PIHOLE_1_PORT)
     r1 = json.load(urllib.request.urlopen(url))
     
-    url = "http://{}:{}/admin/api.php".format(PIHOLE_2_ADDR, PIHOLE_2_PORT)
+    url = "http://{}:{}/admin/api.php?summary&auth=".format(PIHOLE_2_ADDR, PIHOLE_2_PORT)
     r2 = json.load(urllib.request.urlopen(url))
 
     try:
