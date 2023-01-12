@@ -112,13 +112,13 @@ def update():
     status_1 = r1['status']
     status_2 = r2['status']
     
-    OUTPUT_STRING = "[✓] Total Queries: {}, (1) {} / (2) {}".format(dns_queries_today_1+dns_queries_today_2, dns_queries_today_1, dns_queries_today_2)
-    OUTPUT_STRING = OUTPUT_STRING + "\n" + "[✓] Queries Cached: {}, (1) {} / (2) {}".format( queries_cached_1+queries_cached_2, queries_cached_1, ads_percentage_today_2)
-    OUTPUT_STRING = OUTPUT_STRING + "\n" + "[×] Queries Blocked: {}, (1) {} / (2) {}".format(ads_blocked_today_1+ads_blocked_today_2, ads_blocked_today_1, ads_blocked_today_2)
-    OUTPUT_STRING = OUTPUT_STRING + "\n" + "[×] Percent Blocked: (1) {:.2%} / (2) {:.2%}".format(ads_percentage_today_1, ads_percentage_today_2)
-    OUTPUT_STRING = OUTPUT_STRING + "\n" + "[×] Blocklist: (1) {} / (2) {}".format(domains_being_blocked_1, domains_being_blocked_2)
+    OUTPUT_STRING = "[✓] Total: {} / {}".format(dns_queries_today_1, dns_queries_today_2)
+    OUTPUT_STRING = OUTPUT_STRING + "\n" + "[✓] Cached: {} / {}".format(queries_cached_1, ads_percentage_today_2)
+    OUTPUT_STRING = OUTPUT_STRING + "\n" + "[×] Blocked: {} / {}".format(ads_blocked_today_1, ads_blocked_today_2)
+    OUTPUT_STRING = OUTPUT_STRING + "\n" + "[×] Blocked: {}% / {}%".format(ads_percentage_today_1, ads_percentage_today_2)
+    OUTPUT_STRING = OUTPUT_STRING + "\n" + "[×] Blocklist: {} / {}".format(domains_being_blocked_1, domains_being_blocked_2)
 
-    STATUS_STRING = "(1) {} / (2) {}".format(status_1, status_2)
+    STATUS_STRING = "{} | {}".format(status_1, status_2)
     
     hash_string = hashlib.sha1((OUTPUT_STRING+STATUS_STRING).encode('utf-8')).hexdigest()
     try:
