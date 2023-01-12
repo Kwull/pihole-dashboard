@@ -133,4 +133,4 @@ def update():
         hash_file.seek(0)
         hash_file.truncate()
         hash_file.write(hash_string)
-    draw_dashboard(STATUS_STRING, OUTPUT_STRING)
+        draw_dashboard(STATUS_STRING, OUTPUT_STRING)
